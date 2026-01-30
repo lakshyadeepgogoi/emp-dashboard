@@ -1,0 +1,15 @@
+<div class="app-container">
+  <app-header />
+
+  <main class="main-content">
+    <app-search-filter (addEmployee)="openAddForm()" />
+    <app-employee-list (editEmployee)="openEditForm($event)" />
+  </main>
+
+  <app-employee-form [isOpen]="isFormOpen()" [employee]="employeeToEdit()" (close)="closeForm()"
+    (saved)="onEmployeeSaved($event)" />
+
+  <footer class="footer">
+    <p>© 2026 Employee Dashboard. Built By LakshyaDeep Gogoi.</p>
+  </footer>
+</div>
